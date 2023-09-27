@@ -9,6 +9,8 @@ function App(){
   <Diena nosaukums = "trešdiena"/>
   <Diena nosaukums = "ceturtdiena"/>
   <Diena nosaukums = "piektdiena"/>
+  <Diena nosaukums = "sesttdiena"/>
+
   </>
   );
 }
