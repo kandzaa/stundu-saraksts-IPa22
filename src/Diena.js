@@ -5,6 +5,17 @@ import Kabinets from './Kabinets';
 
 
 function Diena(props){
+    // const stunduSarakstsJSX = props.stundas.map((stunda) => {
+    //     return <Stunda name={stunda}/>
+    // });
+
+    // return(
+    //     <>
+    //     <ol>
+    //         {stunduSarakstsJSX}
+    //     </ol>
+    //     </>
+    // )
 return(
     <>
     <table >

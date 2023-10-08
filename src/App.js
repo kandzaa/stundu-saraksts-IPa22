@@ -3,34 +3,53 @@ import './global.css';
 
 
 function App(){
-  const PirmdienasStundas = [
-  "Krievu valoda",
-  "Sociālās zinības un vēsture",
-  "Sistēmu programmēšana",
-  "Sistēmu programmēšana"
-];
-const OtrdienasStundas = [
-  "Sociālās zinības un vēsture",
-	"Dabaszinības",
-	"Matemātika",
-	"Sports"
-];
-const TrešdienasStundas = [
-  "Datorsistēmas un datortīkli",
-  "Datorsistēmas un datortīkli",
-  "Sistēmu programmēšana",
-  "Sistēmu programmēšana"
-];
-const CeturtienaStundas = [
-  "Sistēmu programmēšana",
-	"Matemātika",
-	"Latviešu valoda un literatūra",
-	"Valodas, kultūras izpratne un izpausmes A"
-];
-const PiektdienaStundas = [
-  "Angļu valoda",
-  "Sociālās zinības un vēsture"
-];
+
+//katrai dienai ir stundas un dienasNosaukums
+  const NedelasStundas = [
+    {
+    diena: "Pirmdiena",
+      stundas: [
+        "Sistēmu programmēšana",
+      "Sistēmu programmēšana",
+      "Sistēmu programmēšana",
+      "Sistēmu programmēšana"
+    ]},
+    {
+    diena: "Otrdiena",
+      stundas: [ 
+      "Sistēmu programmēšana",
+      "Sistēmu programmēšana",
+      "Sistēmu programmēšana",
+      "Sistēmu programmēšana"
+    ]},
+
+      {
+    diena: "Tresdiena",
+      stundas: [  
+      "Sistēmu programmēšana",
+      "Sistēmu programmēšana",
+      "Sistēmu programmēšana",
+      "Sistēmu programmēšana"
+      ]},
+      {
+    diena: "Ceturtdiena",
+      stundas: [  
+      "Sistēmu programmēšana",
+      "Sistēmu programmēšana",
+      "Sistēmu programmēšana",
+      "Sistēmu programmēšana"
+    ]},
+    {
+    diena: "Piektdiena",
+      stundas: [  
+      "Sistēmu programmēšana",
+      "Sistēmu programmēšana",
+      "Sistēmu programmēšana",
+      "Sistēmu programmēšana"
+    ]},
+]
+
+
 
 
   return (
