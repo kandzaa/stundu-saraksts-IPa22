@@ -1,7 +1,19 @@
 table, th, td, tr{
     border: 1px solid black;
-    width: 100%;
+    
 }
 p{
+    margin: 10;
+}
+table{
+
+    width: 100%;
+}
+ol{
+    width: 100%;
     margin: 0;
+    padding: 10;
+}
+.diena{
+    border: 0;
 }

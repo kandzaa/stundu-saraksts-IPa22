@@ -1,68 +1,58 @@
-import Stunda from './Stunda';
-import Skolotajs from './Skolotajs';
-import Kabinets from './Kabinets';
+import React, { useState, useEffect } from 'react';
+import App from './App';
+
+function Diena() {
+  const [users, setUsers] = useState([]);
+
+  const fetchUserData = () => {
+    fetch('http://skrazzo.sites.hex.lv/projects/class-list/db.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        setUsers(data);
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }
+
+  useEffect(() => {
+    fetchUserData();
+  }, []);
 
 
 
-function Diena(props){
-    // const stunduSarakstsJSX = props.stundas.map((stunda) => {
-    //     return <Stunda name={stunda}/>
-    // });
-
-    // return(
-    //     <>
-    //     <ol>
-    //         {stunduSarakstsJSX}
-    //     </ol>
-    //     </>
-    // )
-return(
-    <>
-    <table >
-        <h1><tr><th>{props.nosaukums}</th></tr></h1>
-<ol>
-        <tr>
-            <td>Stunda</td>
-            <td>Skolotajs</td>
-            <td>Kabinets</td>
-        </tr>
-
-    <li>
-        <tr>
-            <td><Stunda stundas={props.stundas[0]}/></td>
-            {/* <td><Skolotajs Vards={PirmdienasSkolotajs[0]} /></td>
-            <td><Kabinets kab={PirmdienasKabinets[0]} /></td> */}
-        </tr>
-    </li>
-
-    <li>
-        <tr>
-            <td><Stunda stundas={props.stundas[1]}/></td>
-            {/* <td><Skolotajs Vards={PirmdienasSkolotajs[1]} /></td>
-            <td><Kabinets kab={PirmdienasKabinets[1]} /></td> */}
-        </tr>
-    </li>
-
-    <li>
-        <tr>
-        <td><Stunda stundas={props.stundas[2]}/></td>
-            {/* <td><Skolotajs Vards={PirmdienasSkolotajs[2]} /></td>
-            <td><Kabinets kab={PirmdienasKabinets[2]} /></td> */}
-        </tr>
-    </li>
-
-    <li>
-        <tr>
-        <td><Stunda stundas={props.stundas[3]}/></td>
-            {/* <td><Skolotajs Vards={PirmdienasSkolotajs[3]} /></td>
-            <td><Kabinets kab={PirmdienasKabinets[3]} /></td> */}
-        </tr>
-    </li>
-</ol>
-        <br />
-    </table>
-    </>
-);
+  return (
+    <div>
+      {users.map((props,IPa22) => (
+        <div key={IPa22}>
+          {/* <h1>{props.nosaukums}</h1> */}
+          <table>
+            <tr>{props.classes[0]}</tr>
+            {/* <thead>
+              <tr>
+                <th>Stunda</th>
+                <th>Skolotajs</th>
+                <th>Kabinets</th>
+              </tr>
+            </thead> */}
+            <tbody>
+              {props.stundas.map((stunda, IPa22) => (
+                <>
+                <tr key={IPa22}></tr>
+                <th>{props.classes[0]}</th>
+                </>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default Diena;
